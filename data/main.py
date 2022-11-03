@@ -57,6 +57,7 @@ class Application(tk.Frame):
             f.writelines(tframe.text.get('1.0','end-1c'))
 
     def run(self):
+        sekf.filesave()
         idx=self.notebook.tabs().index(self.notebook.select())
         fname=self.fnames[idx]
         sp.run('{} {}'.format(self.csc_path,fname),startupinfo=self.startupinfo)
